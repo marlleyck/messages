@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { MessageType } from './MessageType';
 
 @Injectable()
 export class MessagesService {
-  private messages = [
+  private messages: MessageType[] = [
     {
       id: 1,
       text: 'Primeira mensagem',
@@ -21,7 +22,7 @@ export class MessagesService {
     return this.messages.find((message) => message.id === id);
   }
 
-  create(message: { id: number; text: string }) {
+  create(message: MessageType) {
     return this.messages.push(message);
   }
 }
