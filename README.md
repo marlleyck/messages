@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# messages
+# Pokemons-server
 Um projeto feito em NestJs para aprender o framework
 =======
 <p align="center">
