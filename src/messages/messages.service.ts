@@ -25,4 +25,14 @@ export class MessagesService {
   create(message: MessageType) {
     return this.messages.push(message);
   }
+
+  update(id: number, message: MessageType) {
+    const messageIndex = this.messages.findIndex(
+      (message) => message.id === id,
+    );
+
+    this.messages[messageIndex] = message;
+
+    return message;
+  }
 }
