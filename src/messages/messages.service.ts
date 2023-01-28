@@ -35,4 +35,14 @@ export class MessagesService {
 
     return message;
   }
+
+  delete(id: number) {
+    const messageIndex = this.messages.findIndex(
+      (message) => message.id === id,
+    );
+
+    delete this.messages[messageIndex];
+
+    return true;
+  }
 }
